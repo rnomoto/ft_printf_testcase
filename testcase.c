@@ -109,31 +109,40 @@
 //     return 0;
 // }
 
-// //%d
-// int main(void)
-// {
-//     int n = -2147483648;
-//     int ft = ft_printf("ft_printf: %d\n", n);
-//     int lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+//%d
+int main(void)
+{
+    int n = -2147483648;
+    int ft = ft_printf("ft_printf: %d\n", n);
+    int lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     n = 2147483647;
-//     ft = ft_printf("ft_printf: %d\n", n);
-//     lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+    n = 2147483647;
+    ft = ft_printf("ft_printf: %d\n", n);
+    lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     return 0;
-// }
+    ft = ft_printf("ft_printf: %d %d %d\n", 10, 11, 12);
+    lb = printf("   printf: %d %d %d\n", 10, 11, 12);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
+
+    return 0;
+}
 
 // //%u
 // int main(void)
@@ -183,17 +192,17 @@
 //     return 0;
 // }
 
-//%%
-int main(void)
-{
-    int ft = ft_printf("ft_printf: %%\n");
-    int lb = printf("   printf: %%\n");
-    printf("len_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if(ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+// //%%
+// int main(void)
+// {
+//     int ft = ft_printf("ft_printf: %%\n");
+//     int lb = printf("   printf: %%\n");
+//     printf("len_ft: %d\n", ft);
+//     printf("len_lb: %d\n", lb);
+//     if(ft == lb)
+//         printf("OK\n");
+//     else
+//         printf("KO\n");
 
-    return 0;
-}
+//     return 0;
+// }
