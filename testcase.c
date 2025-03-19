@@ -207,13 +207,23 @@
 //     return 0;
 // }
 
-// different conversion
-
+// other cases
 int main(void)
 {
     int ft = ft_printf("ft_printf: %d %s %%\n", 123, "HELLO");
     int lb = printf("   printf: %d %s %%\n", 123, "HELLO");
     printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
+
+    printf("empty string\nft_printf:");
+    int ft = ft_printf("");
+    printf("\n   printf:")
+    int lb = printf("");
+    printf("\nlen_ft: %d\n", ft);
     printf("len_lb: %d\n", lb);
     if(ft == lb)
         printf("OK\n");
