@@ -242,11 +242,24 @@ int main(void)
 
     printf("empty string\nft_printf:");
     int ft = ft_printf("");
-    printf("\n   printf:")
+    printf("\n   printf:");
     int lb = printf("");
     printf("\nlen_ft: %d\n", ft);
     printf("len_lb: %d\n", lb);
     if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
+
+
+    // single % input is undefined
+    printf("ft_printf: ");
+    int ft = ft_printf("%");
+    printf("\n   printf:");
+    int lb = printf("%");
+    printf("\nlen_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if (ft == lb)
         printf("OK\n");
     else
         printf("KO\n");
