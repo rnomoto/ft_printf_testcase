@@ -2,6 +2,7 @@
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 
 // // no format
@@ -109,61 +110,71 @@
 //     return 0;
 // }
 
-// //%d
-// int main(void)
-// {
-//     int n = -2147483648;
-//     int ft = ft_printf("ft_printf: %d\n", n);
-//     int lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+//%d
+int main(void)
+{
+    int n = -2147483648;
+    int ft = ft_printf("ft_printf: %d\n", n);
+    int lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     n = 2147483647;
-//     ft = ft_printf("ft_printf: %d\n", n);
-//     lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+    n = 2147483647;
+    ft = ft_printf("ft_printf: %d\n", n);
+    lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     ft = ft_printf("ft_printf: %d %d %d\n", 10, 11, 12);
-//     lb = printf("   printf: %d %d %d\n", 10, 11, 12);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+    ft = ft_printf("ft_printf: %d %d %d\n", 10, 11, 12);
+    lb = printf("   printf: %d %d %d\n", 10, 11, 12);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     n = 0;
-//     ft = ft_printf("ft_printf: %d\n", n);
-//     lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+    n = 0;
+    ft = ft_printf("ft_printf: %d\n", n);
+    lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     // Return value will overflow. Same behavior as original printf.
-//     n = INT_MAX + 1;
-//     ft = ft_printf("ft_printf: %d\n", n);
-//     lb = printf("   printf: %d\n", n);
-//     printf("len_ft: %d\n", ft);
-//     printf("len_lb: %d\n", lb);
-//     if(ft == lb)
-//         printf("OK\n");
-//     else
-//         printf("KO\n");
+    // Return value will overflow. Same behavior as original printf.
+    n = INT_MAX + 1;
+    ft = ft_printf("ft_printf: %d\n", n);
+    lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
 
-//     return 0;
-// }
+    n = INT_MIN - 1;
+    ft = ft_printf("ft_printf: %d\n", n);
+    lb = printf("   printf: %d\n", n);
+    printf("len_ft: %d\n", ft);
+    printf("len_lb: %d\n", lb);
+    if(ft == lb)
+        printf("OK\n");
+    else
+        printf("KO\n");
+
+    return 0;
+}
 
 // //%u
 // int main(void)
@@ -228,41 +239,41 @@
 //     return 0;
 // }
 
-// other cases
-int main(void)
-{
-    int ft = ft_printf("ft_printf: %d %s %%\n", 123, "HELLO");
-    int lb = printf("   printf: %d %s %%\n", 123, "HELLO");
-    printf("len_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if(ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+// // other cases
+// int main(void)
+// {
+//     int ft = ft_printf("ft_printf: %d %s %%\n", 123, "HELLO");
+//     int lb = printf("   printf: %d %s %%\n", 123, "HELLO");
+//     printf("len_ft: %d\n", ft);
+//     printf("len_lb: %d\n", lb);
+//     if(ft == lb)
+//         printf("OK\n");
+//     else
+//         printf("KO\n");
 
-    printf("empty string\nft_printf:");
-    int ft = ft_printf("");
-    printf("\n   printf:");
-    int lb = printf("");
-    printf("\nlen_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if(ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+//     printf("empty string\nft_printf:");
+//     int ft = ft_printf("");
+//     printf("\n   printf:");
+//     int lb = printf("");
+//     printf("\nlen_ft: %d\n", ft);
+//     printf("len_lb: %d\n", lb);
+//     if(ft == lb)
+//         printf("OK\n");
+//     else
+//         printf("KO\n");
 
 
-    // single % input is undefined
-    printf("ft_printf: ");
-    int ft = ft_printf("%");
-    printf("\n   printf:");
-    int lb = printf("%");
-    printf("\nlen_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if (ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+//     // single % input is undefined
+//     printf("ft_printf: ");
+//     int ft = ft_printf("%");
+//     printf("\n   printf:");
+//     int lb = printf("%");
+//     printf("\nlen_ft: %d\n", ft);
+//     printf("len_lb: %d\n", lb);
+//     if (ft == lb)
+//         printf("OK\n");
+//     else
+//         printf("KO\n");
 
-    return 0;
-}
+//     return 0;
+// }
