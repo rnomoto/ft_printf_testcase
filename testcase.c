@@ -113,7 +113,7 @@
 //%d
 int main(void)
 {
-    int n = -2147483648;
+    int n = INT_MIN;
     int ft = ft_printf("ft_printf: %d\n", n);
     int lb = printf("   printf: %d\n", n);
     printf("len_ft: %d\n", ft);
@@ -123,7 +123,7 @@ int main(void)
     else
         printf("KO\n");
 
-    n = 2147483647;
+    n = INT_MAX;
     ft = ft_printf("ft_printf: %d\n", n);
     lb = printf("   printf: %d\n", n);
     printf("len_ft: %d\n", ft);
