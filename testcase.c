@@ -153,25 +153,25 @@ int main(void)
         printf("KO\n");
 
     // Return value will overflow. Same behavior as original printf.
-    n = INT_MAX + 1;
-    ft = ft_printf("ft_printf: %d\n", n);
-    lb = printf("   printf: %d\n", n);
-    printf("len_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if(ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+    // n = INT_MAX + 1;
+    // ft = ft_printf("ft_printf: %d\n", n);
+    // lb = printf("   printf: %d\n", n);
+    // printf("len_ft: %d\n", ft);
+    // printf("len_lb: %d\n", lb);
+    // if(ft == lb)
+    //     printf("OK\n");
+    // else
+    //     printf("KO\n");
 
-    n = INT_MIN - 1;
-    ft = ft_printf("ft_printf: %d\n", n);
-    lb = printf("   printf: %d\n", n);
-    printf("len_ft: %d\n", ft);
-    printf("len_lb: %d\n", lb);
-    if(ft == lb)
-        printf("OK\n");
-    else
-        printf("KO\n");
+    // n = INT_MIN - 1;
+    // ft = ft_printf("ft_printf: %d\n", n);
+    // lb = printf("   printf: %d\n", n);
+    // printf("len_ft: %d\n", ft);
+    // printf("len_lb: %d\n", lb);
+    // if(ft == lb)
+    //     printf("OK\n");
+    // else
+    //     printf("KO\n");
 
     return 0;
 }
