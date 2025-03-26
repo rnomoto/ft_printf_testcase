@@ -215,7 +215,6 @@ int main(void)
     else
         printf("KO\n");
 
-
     // // single % input is undefined
     // printf("ft_printf: ");
     // ft = ft_printf("%");
